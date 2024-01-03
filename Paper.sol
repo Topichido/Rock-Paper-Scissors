@@ -59,7 +59,7 @@ contract RockPaperScissors {
     // Function allowing a player to join the game, assuming the game has not started and there's an available slot.
 
     function submitMove(Move move) external gameInProgress onlyPlayers gameNotEnded {
-        require(moves[msg.sender] == Move.None, "You've already submitted your move");
+        require(moves[msg.sender] == Move.None, "You have already submitted your move");
 
         moves[msg.sender] = move;
 
